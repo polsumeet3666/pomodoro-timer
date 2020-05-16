@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <h1> Focus using Pomodoro Technique</h1>
+        <!-- <h1>Focus using <span class="title">
+                <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">
+                    Pomodoro Technique</a>
+            </span>
+        </h1> -->
+        <div class="timer-container">
+            <div>
+                <button class="btn" id="pomodoro" onclick="pomodoro()">Pomodoro</button>
+                <button class="btn" id="shortBreak" onclick="shortBreak()">Short Break</button>
+                <button class="btn" id="longBreak" onclick="longBreak()">Long Break</button>
+            </div>
+            <div class="timer">
+                <span id="min">25</span>:<span id="sec">00</span>
+            </div>
+            <div><button onclick="startTimer()" id="btnStart" class="btn">Start</button></div>
+            <div>
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bell">
+        <source src="./sound/bell.mp3" type="audio/mp3" />
+        <p> Your browser does not support the audio tag.</p>
+    </audio>
+    <audio src="./sound/applause.mp3" id="applause"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
