@@ -1,0 +1,192 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./theme.scss";
+
+$bgPt: #eb2d2d;
+$bgPtLight: #f8524f;
+$bgPtDark: #c23d3b;
+$bgSt: #2a75dd;
+$bgStLight: #4d89dd;
+$bgStDark: #3b6bad;
+$bgLt: #2add81;
+$bgLtLight: #5add9a;
+$bgLtDark: #3d9b6a;
+$fontColor: white;
+
+body {
+	font-family: "Roboto", "sans-serif";
+}
+
+%main-common {
+	margin-top: 2%;
+	padding: 10px;
+	width: 100%;
+	max-width: 500px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+%common-setting {
+	margin-top: 20px;
+	font-size: 10px;
+	border: none;
+}
+.outer-main {
+	width: 100%;
+	max-width: 600px;
+	.btn-setting-pt {
+		@extend %common-setting;
+		background-color: $bgPtLight;
+	}
+	.btn-setting-pt:hover {
+		@extend %common-setting;
+		background-color: $bgPtDark;
+	}
+
+	.btn-setting-st {
+		@extend %common-setting;
+		background-color: $bgStLight;
+	}
+	.btn-setting-st:hover {
+		@extend %common-setting;
+		background-color: $bgStDark;
+	}
+
+	.btn-setting-lt {
+		@extend %common-setting;
+		background-color: $bgLtLight;
+	}
+	.btn-setting-lt:hover {
+		@extend %common-setting;
+		background-color: $bgLtDark;
+	}
+}
+
+.theme-pt {
+	background-color: $bgPt;
+	color: $fontColor;
+	.main {
+		background-color: $bgPtLight;
+		@extend %main-common;
+		.btn-start {
+			@extend %action-btn;
+			width: 150px;
+			height: 50px;
+			background-color: white;
+			color: $bgPt;
+		}
+		.btn-app {
+			@extend %action-btn;
+			background-color: inherit;
+		}
+		.btn-app:hover {
+			@extend %action-btn;
+			font-weight: bolder;
+			background-color: $bgPtDark;
+		}
+	}
+}
+
+.theme-st {
+	background-color: $bgSt;
+	color: $fontColor;
+	.main {
+		background-color: $bgStLight;
+		@extend %main-common;
+		.btn-start {
+			@extend %action-btn;
+			width: 150px;
+			height: 50px;
+			background-color: white;
+			color: $bgSt;
+		}
+		.btn-app {
+			@extend %action-btn;
+			background-color: inherit;
+		}
+		.btn-app:hover {
+			@extend %action-btn;
+			font-weight: bolder;
+			background-color: $bgStDark;
+		}
+	}
+}
+
+.theme-lt {
+	background-color: $bgLt;
+	color: $fontColor;
+	.main {
+		background-color: $bgLtLight;
+		@extend %main-common;
+		.btn-start {
+			@extend %action-btn;
+			width: 150px;
+			height: 50px;
+			background-color: white;
+			color: $bgLt;
+		}
+		.btn-app {
+			@extend %action-btn;
+			background-color: inherit;
+		}
+		.btn-app:hover {
+			@extend %action-btn;
+			font-weight: bolder;
+			background-color: $bgLtDark;
+		}
+	}
+}
+.col {
+	justify-content: center;
+	align-items: center;
+}
+
+%action-btn {
+	// background-color: inherit;
+	// border-color: inherit;
+	margin-top: 10px;
+	border: none;
+}
+%display-timer {
+	font-size: 100px;
+}
+
+// #timer-mins {
+// 	@extend %display-timer;
+// }
+
+// #timer-secs {
+// 	@extend %display-timer;
+// }
+
+.display {
+	@extend %display-timer;
+}
+.title-row {
+	border-bottom: 1px solid;
+}
+
+.title {
+	text-align: left;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 20px;
+	margin-top: 35px;
+}
+.setting {
+	text-align: right;
+	margin: 20px;
+}
+.progressBar {
+	margin: 10px;
+	height: 5px;
+	background-color: inherit;
+	.progress-bar {
+		background-color: white;
+	}
+}
+.customModal {
+	color: black;
+	input {
+		width: 100px;
+	}
+}
